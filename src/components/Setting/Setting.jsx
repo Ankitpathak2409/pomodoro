@@ -1,4 +1,4 @@
-import "./setting.css";
+import "./Setting.css";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { useEffect } from "react";
 
