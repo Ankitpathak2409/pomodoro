@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient-main: linear-gradient(to right, #e684ae, #79cbca, #77a1d3);
+
+  --color-pomodoro: #ff6b6b;
+  --color-pomodoro-dark: #c44536;
+
+  --color-break-pink: #e684ae;
+  --color-break-teal: #79cbca;
+  --color-break-blue: #77a1d3;
+  --color-break-gray: #98a1a9;
+
+  --color-bg-light: rgba(249, 250, 251, 0.6);
+  --color-bg-dark: rgba(30, 30, 46, 0.8);
+  --color-card-light: rgba(255, 255, 255, 0.9);
+  --color-card-dark: #1e1e2e;
+
+  --color-text-dark: #1f2937;
+  --color-text-gray: #9ca3af;
+  --color-text-light: white;
+}
+
+body.dark-theme {
+  --gradient-main: linear-gradient(to right, #1e1e2e, #2a2a3d, #1a1a24);
+  --color-bg-light: var(--color-bg-dark);
+  --color-card-light: var(--color-card-dark);
+  --color-text-dark: var(--color-text-light);
+  --color-text-gray: #cbd5e1;
+}
+
+body {
+  background-image: var(--gradient-main);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  font-family: "Inter", sans-serif;
+}
+
+.heroSection {
+  height: auto;
+  padding-bottom: 3.5%;
+  margin: 3.5% 8%;
+  border-radius: 25px;
+  background-color: var(--color-bg-light);
+  transition: all 0.3s ease-in-out;
+
+  .mainHeading {
+    color: var(--color-text-dark);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+}
+
+.todoStat {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    margin: 4% 5%;
+    padding: 20px;
+
+    .mainHeading {
+      font-size: 28px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .todoStat {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    margin: 7% 4%;
+    padding: 15px;
+    border-radius: 15px;
+
+    .mainHeading {
+      font-size: 24px;
+      padding-top: 20px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .todoStat {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    margin: 5% 2%;
+    padding: 10px;
+    border-radius: 10px;
+
+    .mainHeading {
+      font-size: 20px;
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .todoStat {
+    gap: 10px;
+  }
+}

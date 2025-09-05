@@ -1,0 +1,181 @@
+.todoList {
+  margin: 5% 2% 5% 7%;
+  width: 40%;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  border-radius: 15px;
+  padding-bottom: 0px;
+  transition: all 0.3s ease-in-out;
+
+  .todoHeading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .todoAddTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addTaskBtn {
+    background-color: var(--color-pomodoro);
+    margin-bottom: 14px;
+    padding: 0.2rem 0.5rem;
+    width: 10vw;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .addTaskBtn:hover {
+    background: var(--color-pomodoro-dark);
+  }
+
+  .todoTasks {
+    margin: 15px 32px 8px 30px;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--color-bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    .todoTaskInput {
+      display: flex;
+      gap: 22px;
+      overflow-wrap: anywhere;
+      font-size: 24px;
+      white-space: normal;
+
+      input {
+        transform: scale(1.8);
+      }
+    }
+
+    .todoDeleteBtn button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--color-pomodoro);
+      font-size: 40px;
+    }
+  }
+}
+.todoTasks span {
+  color: var(--color-text-dark);
+}
+
+@media (max-width: 1024px) {
+  .todoList {
+    width: 50%;
+    margin: 4% 3%;
+
+    .todoHeading {
+      font-size: 1.8rem;
+    }
+
+    .addTaskBtn {
+      width: 11vw;
+      font-size: 14px;
+      padding: 0.4rem 0.7rem;
+    }
+
+    .todoTasks {
+      padding: 0px 0.7rem;
+
+      .todoTaskInput {
+        font-size: 20px;
+        gap: 15px;
+
+        input {
+          transform: scale(1.5);
+        }
+      }
+      .todoDeleteBtn button {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .todoList {
+    width: 80%;
+    margin: 5% auto;
+    padding-bottom: 2rem;
+
+    .todoHeading {
+      font-size: 1.6rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .addTaskBtn {
+      width: 100px;
+    }
+
+    .todoTasks {
+      margin: 12px 20px;
+      padding: 0.2rem 1rem;
+      gap: 20px;
+
+      .todoTaskInput {
+        font-size: 18px;
+        gap: 12px;
+
+        input {
+          transform: scale(1.3);
+        }
+      }
+      .todoDeleteBtn button {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .todoList {
+    width: 90%;
+    margin: 6% auto;
+    padding: 0.5rem;
+
+    .todoHeading {
+      font-size: 1.4rem;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .addTaskBtn {
+      width: 90px;
+      font-size: 13px;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .todoTasks {
+      margin: 10px 12px;
+      padding: 0.2rem 0.6rem;
+      gap: 12px;
+
+      .todoTaskInput {
+        font-size: 16px;
+        gap: 10px;
+
+        input {
+          transform: scale(1.2);
+        }
+      }
+      .todoDeleteBtn button {
+        font-size: 22px;
+      }
+    }
+  }
+}

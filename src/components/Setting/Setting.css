@@ -1,0 +1,150 @@
+.settingIcon {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  z-index: 100000;
+  font-size: 2rem;
+}
+
+.settingsPanel {
+  position: absolute;
+  top: 45px;
+  right: 30px;
+  width: 380px;
+  height: auto;
+  background-color: var(--color-card-light);
+  padding: 20px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 9999;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+
+  label {
+    color: var(--color-text-dark);
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      font-weight: 400;
+      width: 5rem;
+      margin-left: 12px;
+      padding: 4px 8px;
+      background-color: var(--color-bg-light);
+      border: 1px solid var(--color-text-gray);
+      border-radius: 6px;
+      outline: none;
+    }
+    .enableSoundCheckbox {
+      transform: scale(1.6);
+      margin-left: 10px;
+    }
+  }
+  .settingsActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    button {
+      color: white;
+      padding: 8px 18px;
+      font-weight: 500;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .saveBtn {
+      background-color: var(--color-break-blue);
+    }
+
+    .cancelBtn {
+      background-color: var(--color-break-gray);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .settingIcon {
+    font-size: 1.8rem;
+    top: 12px;
+    right: 20px;
+  }
+  .settingsPanel {
+    right: 20px;
+    width: 320px;
+
+    label {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .settingIcon {
+    font-size: 1.6rem;
+    top: 12px;
+    right: 15px;
+  }
+
+  .settingsPanel {
+    top: 40px;
+    right: 23px;
+
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+
+    label {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    input {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  .settingsActions {
+    justify-content: center;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .settingIcon {
+    font-size: 0.5rem;
+    top: 25px;
+    right: 12px;
+  }
+
+  .settingsPanel {
+    top: 53px;
+    width: 50%;
+    padding: 15px;
+
+    label {
+      font-size: 0.95rem;
+    }
+
+    input {
+      font-size: 0.9rem;
+      padding: 3px 6px;
+    }
+  }
+
+  .settingsActions button {
+    font-size: 0.3rem;
+    padding: 3px 6px;
+  }
+}

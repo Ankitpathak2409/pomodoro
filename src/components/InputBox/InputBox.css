@@ -1,0 +1,24 @@
+.todoInput {
+  margin-bottom: 12px;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  border: none;
+  width: 35vw;
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .todoInput {
+    width: 38vw;
+    padding: 0.4rem 0.6rem 0.4rem 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .todoInput {
+    width: 72vw;
+  }
+}

@@ -1,0 +1,48 @@
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-color: #1e1e1e;
+  --border-color: #333;
+}
+
+.dark-theme body,
+.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.darkLightMode {
+  position: absolute;
+  top: 15px;
+  right: 70px;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10000;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .darkLightMode {
+    font-size: 1.8rem;
+    top: 12px;
+    right: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .darkLightMode {
+    font-size: 1.6rem;
+    top: 12px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .darkLightMode {
+    font-size: 1rem;
+    top: 25px;
+    right: 45px;
+  }
+}
